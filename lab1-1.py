@@ -25,6 +25,7 @@ print("--------------------------------")
 print("Cookies:")
 cookies = response.cookies 
 if cookies:
+    print("The page uses cookies\n")
     for cookie, value in enumerate(cookies):
         print("Cookie Name: {}   Expires in {} days".format(value.name,round((value.expires-time.time())/86400)))
 else:
